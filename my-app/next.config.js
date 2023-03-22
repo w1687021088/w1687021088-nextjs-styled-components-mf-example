@@ -11,7 +11,12 @@ const nextConfig = {
             common: `common@ http://localhost:3006/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`
           },
           filename: 'static/chunks/remoteEntry.js',
-          shared: {}
+          shared: {
+              'styled-components/': {
+                  singleton: true,
+                  requiredVersion: false
+              }
+          }
         })
     )
     return config

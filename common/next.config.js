@@ -11,7 +11,12 @@ const nextConfig = {
           exposes: {
             './card': './src/components/card/index.tsx'
           },
-          shared: {}
+            shared: {
+              'styled-components/': {
+                singleton: true,
+                requiredVersion: false
+              }
+            }
         })
     )
 
